@@ -1,0 +1,18 @@
+{
+  "name": "consola_interactiva",
+  "version": "0.0.0",
+  "description": "Proyecto de consola interactiva con Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index"
+  },
+  "keywords": [
+    "node",
+    "console"
+  ],
+  "author": "kevin4moe",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
