@@ -41,19 +41,15 @@ class Tareas {
   }
 
   listarPendientesCompletadas(completadas = true) {
-    const tareas = [];
+    let contador = 0;
     this.listadoArr.forEach((tarea) => {
-      if ((tarea.completadoEn != null) == completadas) {
-        tareas.push(tarea);
+      const { desc, completadoEn } = tarea;
+      if ((completadoEn != null) == completadas) {
+        contador++;
+        const estado = completadas ? "Completada".green : "Pendiente".red;
+
+        console.log(`${(contador + ".").green} ${desc} :: ${estado}`);
       }
-    });
-
-    tareas.forEach((tarea, index) => {
-      const i = (index + 1 + ".").green;
-      const { desc } = tarea;
-      const estado = completadas ? "Completada".green : "Pendiente".red;
-
-      console.log(`${i} ${desc} :: ${estado}`);
     });
   }
 }
