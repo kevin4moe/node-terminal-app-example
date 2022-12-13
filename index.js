@@ -32,7 +32,7 @@ const main = async () => {
         console.log(desc);
         break;
       case "2":
-        console.log(tareas.listadoArr);
+        tareas.listadoCompleto();
         break;
       case "3":
         break;
