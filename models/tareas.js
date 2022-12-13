@@ -30,6 +30,12 @@ class Tareas {
     this._listado[tarea.id] = tarea;
   }
 
+  borrarTarea(id = "") {
+    if (this._listado[id]) {
+      delete this._listado[id];
+    }
+  }
+
   listadoCompleto() {
     this.listadoArr.forEach((tarea, index) => {
       const i = (index + 1 + ".").green;
